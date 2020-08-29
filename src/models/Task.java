@@ -16,12 +16,12 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(
             name = "getAllTasklist",
-            query = "SELECT m FROM Tasklists AS m ORDER BY m.id DESC"
+            query = "SELECT m FROM Task AS m ORDER BY m.id DESC"
             )
 })
 
-@Table(name = "tasklists")
-public class Tasklists {
+@Table(name = "tasks")
+public class Task {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
